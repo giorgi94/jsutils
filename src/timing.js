@@ -37,7 +37,7 @@ const delay = function (fn, t) {
 const debounce = (fn, time) => {
     let timeout;
 
-    return function () {
+    return function (arguments) {
         const functionCall = () => fn.apply(this, arguments);
         clearTimeout(timeout);
         timeout = setTimeout(functionCall, time);
